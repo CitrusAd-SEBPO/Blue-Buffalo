@@ -357,7 +357,7 @@ h4 {
   justify-content: center;
   align-items: center;
 }
-/* feature section product container styling */
+/* product container styling */
 
 .citrusBlue_Treats_splide-irresitible,
 .citrusBlue_Treats_splide-delectable {
@@ -398,7 +398,6 @@ h4 {
   font-size: 18px;
   line-height: 22px;
   text-align: left;
-  /* padding: 20px 0 20px; */
   margin: 20px 0 10px;
   text-decoration: none;
   overflow: hidden;
@@ -449,7 +448,7 @@ h4 {
   align-items: center;
 }
 
-/* END feature section product container styling */
+/* END lifestyle section product container styling */
 
 .citrusBlue_Treats__lifestyle_section {
   background: #f4f7ff;
@@ -632,7 +631,7 @@ h4 {
   }
   /* Tasty Treats Food */
   .citrusBlue_Treats_food_container_img img {
-    width: 170px;
+    width: 150px;
   }
 }
 
@@ -656,7 +655,7 @@ h4 {
 
   /* Explore Cat Treats Item */
   .citrusBlue_Treats_Food_Explore {
-    padding-bottom: 0;
+    padding-bottom: 40px;
   }
 
   /* Lifestyle annd Product Common Section */
@@ -804,7 +803,7 @@ h4 {
   }
   .citrusBlue_Treats_banner-copy .citrusBlue_Treats__btn_alternative {
     font-weight: bold;
-    width: 160px;
+    width: 140px;
     height: 42px;
   }
 
