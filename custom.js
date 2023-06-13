@@ -1,0 +1,259 @@
+// classic product carousel
+featureProductScroller(".citrusBlue_Treats_splide-irresitible");
+featureProductScroller(".citrusBlue_Treats_splide-delectable");
+
+function featureProductScroller(idx) {
+  var splides = document.querySelectorAll(idx);
+  if (splides.length) {
+    for (var i = 0; i < splides.length; i++) {
+      var splideElement = splides[i];
+      var splideDefaultOptions = {
+        type: "slide",
+        autoplay: false,
+        rewindSpeed: 500,
+        speed: 500,
+        pauseOnHover: true,
+        perPage: 2,
+        perMove: 1,
+        start: 0,
+        focus: 0,
+        pagination: false,
+        omitEnd: true,
+        breakpoints: {
+          375: {
+            perPage: 1,
+          },
+          576: {
+            perPage: 1,
+          },
+          991: {
+            perPage: 1,
+          },
+          992: {
+            perPage: 1,
+          },
+          1024: {
+            perPage: 2,
+          },
+          1200: {
+            perPage: 2,
+          },
+          1440: {
+            perPage: 2,
+          },
+        },
+      };
+
+      new Splide(splideElement, splideDefaultOptions).mount();
+    }
+  }
+}
+
+
+
+{
+  /*-------------------------*
+           custom coded hero slider 
+           *---------------------------*/
+}
+
+/*----------------------
+  ---- RoW slider js -----
+  ------------------------*/
+let citrusBlue_Treats_carousel = document.querySelector(".citrusBlue_Treats_carousel");
+
+let citrusBlue_Treats_carouselInner = document.querySelector(
+  ".citrusBlue_Treats_carousel-inner"
+);
+
+let prev = document.querySelector(".citrusBlue_Treats_carousel-controls .prev");
+
+let next = document.querySelector(".citrusBlue_Treats_carousel-controls .next");
+
+let slides = document.querySelectorAll(
+  ".citrusBlue_Treats_carousel-inner .citrusBlue_Treats_carousel-item"
+);
+
+let totalSlides = slides.length;
+
+let step = 100 / totalSlides;
+
+let activeSlide = 0;
+
+let activeIndicator = 0;
+
+let direction = -1;
+
+let jump = 1;
+
+let interval = 5000000000; /*5000*/
+
+let time;
+
+//Init citrusBlue_Treats_carousel
+citrusBlue_Treats_carouselInner.style.minWidth = totalSlides * 100 + "%";
+loadIndicators();
+loop(true);
+
+//citrusBlue_Treats_carousel events
+
+next.addEventListener("click", () => {
+  slideToNext();
+});
+
+prev.addEventListener("click", () => {
+  slideToPrev();
+});
+
+citrusBlue_Treats_carouselInner.addEventListener("transitionend", () => {
+  if (direction === -1) {
+    if (jump > 1) {
+      for (let i = 0; i < jump; i++) {
+        activeSlide++;
+        citrusBlue_Treats_carouselInner.append(
+          citrusBlue_Treats_carouselInner.firstElementChild
+        );
+      }
+    } else {
+      activeSlide++;
+      citrusBlue_Treats_carouselInner.append(
+        citrusBlue_Treats_carouselInner.firstElementChild
+      );
+    }
+  } else if (direction === 1) {
+    if (jump > 1) {
+      for (let i = 0; i < jump; i++) {
+        activeSlide--;
+        citrusBlue_Treats_carouselInner.prepend(
+          citrusBlue_Treats_carouselInner.lastElementChild
+        );
+      }
+    } else {
+      activeSlide--;
+      citrusBlue_Treats_carouselInner.prepend(
+        citrusBlue_Treats_carouselInner.lastElementChild
+      );
+    }
+  }
+
+  citrusBlue_Treats_carouselInner.style.transition = "none";
+  citrusBlue_Treats_carouselInner.style.transform = "translateX(0%)";
+  setTimeout(() => {
+    jump = 1;
+    citrusBlue_Treats_carouselInner.style.transition = "all ease .5s";
+  });
+  updateIndicators();
+});
+
+document
+  .querySelectorAll(".citrusBlue_Treats_carousel-indicators span")
+  .forEach((item) => {
+    item.addEventListener("click", (e) => {
+      let slideTo = parseInt(e.target.dataset.slideTo);
+      let indicators = document.querySelectorAll(
+        ".citrusBlue_Treats_carousel-indicators span"
+      );
+
+      indicators.forEach((item, index) => {
+        if (item.classList.contains("active")) {
+          activeIndicator = index;
+        }
+      });
+      if (slideTo - activeIndicator > 1) {
+        jump = slideTo - activeIndicator;
+        step = jump * step;
+        slideToNext();
+      } else if (slideTo - activeIndicator === 1) {
+        slideToNext();
+      } else if (slideTo - activeIndicator < 0) {
+        if (Math.abs(slideTo - activeIndicator) > 1) {
+          jump = Math.abs(slideTo - activeIndicator);
+          step = jump * step;
+          slideToPrev();
+        }
+        slideToPrev();
+      }
+      step = 100 / totalSlides;
+    });
+  });
+
+citrusBlue_Treats_carousel.addEventListener("mouseover", () => {
+  loop(false);
+});
+
+citrusBlue_Treats_carousel.addEventListener("mouseout", () => {
+  loop(true);
+});
+
+//citrusBlue_Treats_carousel functions
+
+function loadIndicators() {
+  slides.forEach((slide, index) => {
+    if (index === 0) {
+      document.querySelector(
+        ".citrusBlue_Treats_carousel-indicators"
+      ).innerHTML += `<span data-slide-to="${index}" class="active"></span>`;
+    } else {
+      document.querySelector(
+        ".citrusBlue_Treats_carousel-indicators"
+      ).innerHTML += `<span data-slide-to="${index}"></span>`;
+    }
+  });
+}
+
+function updateIndicators() {
+  if (activeSlide > totalSlides - 1) {
+    activeSlide = 0;
+  } else if (activeSlide < 0) {
+    activeSlide = totalSlides - 1;
+  }
+  document
+    .querySelector(".citrusBlue_Treats_carousel-indicators span.active")
+    .classList.remove("active");
+  document
+    .querySelectorAll(".citrusBlue_Treats_carousel-indicators span")
+    [activeSlide].classList.add("active");
+}
+
+function slideToNext() {
+  if (direction === 1) {
+    direction = -1;
+    citrusBlue_Treats_carouselInner.prepend(
+      citrusBlue_Treats_carouselInner.lastElementChild
+    );
+  }
+
+  citrusBlue_Treats_carousel.style.justifyContent = "flex-start";
+  citrusBlue_Treats_carouselInner.style.transform = `translateX(-${step}%)`;
+}
+
+function slideToPrev() {
+  if (direction === -1) {
+    direction = 1;
+    citrusBlue_Treats_carouselInner.append(
+      citrusBlue_Treats_carouselInner.firstElementChild
+    );
+  }
+  citrusBlue_Treats_carousel.style.justifyContent = "flex-end";
+  citrusBlue_Treats_carouselInner.style.transform = `translateX(${step}%)`;
+  loop(false);
+}
+
+function loop(status) {
+  if (status === true) {
+    time = setInterval(() => {
+      slideToNext();
+    }, interval);
+  } else {
+    clearInterval(time);
+  }
+}
+// pov loader add. before full load js pov none.
+document.addEventListener("DOMContentLoaded", function () {
+  citrusBlue_Treats_carousel.style.display = "flex";
+});
+
+/*-----------------------
+  --- End Row js Slider ----
+  ------------------------*/
+
