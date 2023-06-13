@@ -86,7 +86,7 @@ let direction = -1;
 
 let jump = 1;
 
-let interval = 5000000000; /*5000*/
+let interval = 5000; /*5000*/
 
 let time;
 

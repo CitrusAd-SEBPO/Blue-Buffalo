@@ -409,8 +409,8 @@ h4 {
   -webkit-box-orient: vertical;
   max-height: 4em; /*standard size is 4em*/
 }
-.citrusBlue_Treats__wrapper .cta-underline a,
-.citrusBlue_Treats__wrapper .cta-underline button {
+.citrusBlue_Treats__wrapper .product-cta-underline a,
+.citrusBlue_Treats__wrapper .product-cta-underline button {
   border: 0;
   margin: 0;
   padding-left: 0;
@@ -425,7 +425,7 @@ h4 {
   cursor: pointer;
 }
 
-.items_wrapper .cta-underline .citrusBlue_Treats_uiqueBtn {
+.items_wrapper .product-cta-underline .citrusBlue_Treats_uiqueBtn {
   margin: 20px 40px;
   text-decoration: none;
   font-size: 20px;
@@ -437,18 +437,18 @@ h4 {
   text-align: end;
 }
 .citrusBlue_Treats__groupProductShot {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-/* .citrusBlue_Treats__groupImage{
-  padding-top: 20px;
-} */
-.citrusBlue_Treats__groupProducts_hover:hover {
   border: 1px solid #001952;
   border-radius: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
+.citrusBlue_Treats__groupProductShot a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 /* END feature section product container styling */
 
 .citrusBlue_Treats__lifestyle_section {
@@ -526,10 +526,10 @@ h4 {
   .items_wrapper__img img {
     height: 100%;
   }
-  .items_wrapper .cta-underline .citrusBlue_Treats_uiqueBtn {
+  .items_wrapper .product-cta-underline .citrusBlue_Treats_uiqueBtn {
     margin: 20px 0px !important;
   }
-  .items_wrapper .cta-underline .citrusBlue_Treats_uiqueBtn {
+  .items_wrapper .product-cta-underline .citrusBlue_Treats_uiqueBtn {
     font-size: 19px;
   }
 }
@@ -603,20 +603,21 @@ h4 {
   }
 
   /* Explore Cat Treats Item */
-  .citrusBlue_Treats_Food_Explore
-    #citrusBlue_Treats_Explore_CatFood_Container {
+  .citrusBlue_Treats_Food_Explore #citrusBlue_Treats_Explore_CatFood_Container {
     width: 850px;
   }
   .citrusBlue_Treats_Explore_category {
     width: 1200px;
   }
-  .items_wrapper .cta-underline .citrusBlue_Treats_uiqueBtn {
+  .items_wrapper__img img {
+    max-height: 100%;
+}
+  .items_wrapper .product-cta-underline .citrusBlue_Treats_uiqueBtn {
     margin: 0;
   }
-  /* .citrusBlue_Treats_Food_Explore
-  #citrusBlue_Treats_Explore_CatFood_Container {
-  width: 768px;
-} */
+  .splide__slide {
+    margin-left: 23px;
+  }
 }
 
 @media all and (max-width: 575px) {
@@ -654,7 +655,9 @@ h4 {
   }
 
   /* Explore Cat Treats Item */
- 
+  .citrusBlue_Treats_Food_Explore {
+    padding-bottom: 0;
+  }
 
   /* Lifestyle annd Product Common Section */
   /* product container with lifestyle banner image */
@@ -714,10 +717,10 @@ h4 {
   .splide__arrows {
     display: none;
   }
-  .items_wrapper .cta-underline .citrusBlue_Treats_uiqueBtn {
+  .items_wrapper .product-cta-underline .citrusBlue_Treats_uiqueBtn {
     margin: 20px 10px;
   }
-  /* .items_wrapper .cta-underline .citrusBlue_Treats_uiqueBtn {
+  /* .items_wrapper .product-cta-underline .citrusBlue_Treats_uiqueBtn {
     margin: 20px 10px;
     text-decoration: none;
     font-size: 20px;
