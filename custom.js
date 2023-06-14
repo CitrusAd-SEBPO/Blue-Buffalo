@@ -1,6 +1,6 @@
-// classic product carousel
-featureProductScroller(".citrusBlue_Treats_splide-irresitible");
-featureProductScroller(".citrusBlue_Treats_splide-delectable");
+// product carousel
+featureProductScroller(".citrusBlue_treats_splide-irresitible");
+featureProductScroller(".citrusBlue_treats_splide-delectable");
 
 function featureProductScroller(idx) {
   var splides = document.querySelectorAll(idx);
@@ -60,18 +60,18 @@ function featureProductScroller(idx) {
 /*----------------------
   ---- RoW slider js -----
   ------------------------*/
-let citrusBlue_Treats_carousel = document.querySelector(".citrusBlue_Treats_carousel");
+let citrusBlue_treats_carousel = document.querySelector(".citrusBlue_treats_carousel");
 
-let citrusBlue_Treats_carouselInner = document.querySelector(
-  ".citrusBlue_Treats_carousel-inner"
+let citrusBlue_treats_carouselInner = document.querySelector(
+  ".citrusBlue_treats_carousel-inner"
 );
 
-let prev = document.querySelector(".citrusBlue_Treats_carousel-controls .prev");
+let prev = document.querySelector(".citrusBlue_treats_carousel-controls .prev");
 
-let next = document.querySelector(".citrusBlue_Treats_carousel-controls .next");
+let next = document.querySelector(".citrusBlue_treats_carousel-controls .next");
 
 let slides = document.querySelectorAll(
-  ".citrusBlue_Treats_carousel-inner .citrusBlue_Treats_carousel-item"
+  ".citrusBlue_treats_carousel-inner .citrusBlue_treats_carousel-item"
 );
 
 let totalSlides = slides.length;
@@ -86,16 +86,16 @@ let direction = -1;
 
 let jump = 1;
 
-let interval = 5000; /*5000*/
+let interval = 5000000000; /*5000*/
 
 let time;
 
-//Init citrusBlue_Treats_carousel
-citrusBlue_Treats_carouselInner.style.minWidth = totalSlides * 100 + "%";
+//Init citrusBlue_treats_carousel
+citrusBlue_treats_carouselInner.style.minWidth = totalSlides * 100 + "%";
 loadIndicators();
 loop(true);
 
-//citrusBlue_Treats_carousel events
+//citrusBlue_treats_carousel events
 
 next.addEventListener("click", () => {
   slideToNext();
@@ -105,53 +105,53 @@ prev.addEventListener("click", () => {
   slideToPrev();
 });
 
-citrusBlue_Treats_carouselInner.addEventListener("transitionend", () => {
+citrusBlue_treats_carouselInner.addEventListener("transitionend", () => {
   if (direction === -1) {
     if (jump > 1) {
       for (let i = 0; i < jump; i++) {
         activeSlide++;
-        citrusBlue_Treats_carouselInner.append(
-          citrusBlue_Treats_carouselInner.firstElementChild
+        citrusBlue_treats_carouselInner.append(
+          citrusBlue_treats_carouselInner.firstElementChild
         );
       }
     } else {
       activeSlide++;
-      citrusBlue_Treats_carouselInner.append(
-        citrusBlue_Treats_carouselInner.firstElementChild
+      citrusBlue_treats_carouselInner.append(
+        citrusBlue_treats_carouselInner.firstElementChild
       );
     }
   } else if (direction === 1) {
     if (jump > 1) {
       for (let i = 0; i < jump; i++) {
         activeSlide--;
-        citrusBlue_Treats_carouselInner.prepend(
-          citrusBlue_Treats_carouselInner.lastElementChild
+        citrusBlue_treats_carouselInner.prepend(
+          citrusBlue_treats_carouselInner.lastElementChild
         );
       }
     } else {
       activeSlide--;
-      citrusBlue_Treats_carouselInner.prepend(
-        citrusBlue_Treats_carouselInner.lastElementChild
+      citrusBlue_treats_carouselInner.prepend(
+        citrusBlue_treats_carouselInner.lastElementChild
       );
     }
   }
 
-  citrusBlue_Treats_carouselInner.style.transition = "none";
-  citrusBlue_Treats_carouselInner.style.transform = "translateX(0%)";
+  citrusBlue_treats_carouselInner.style.transition = "none";
+  citrusBlue_treats_carouselInner.style.transform = "translateX(0%)";
   setTimeout(() => {
     jump = 1;
-    citrusBlue_Treats_carouselInner.style.transition = "all ease .5s";
+    citrusBlue_treats_carouselInner.style.transition = "all ease .5s";
   });
   updateIndicators();
 });
 
 document
-  .querySelectorAll(".citrusBlue_Treats_carousel-indicators span")
+  .querySelectorAll(".citrusBlue_treats_carousel-indicators span")
   .forEach((item) => {
     item.addEventListener("click", (e) => {
       let slideTo = parseInt(e.target.dataset.slideTo);
       let indicators = document.querySelectorAll(
-        ".citrusBlue_Treats_carousel-indicators span"
+        ".citrusBlue_treats_carousel-indicators span"
       );
 
       indicators.forEach((item, index) => {
@@ -177,25 +177,25 @@ document
     });
   });
 
-citrusBlue_Treats_carousel.addEventListener("mouseover", () => {
+citrusBlue_treats_carousel.addEventListener("mouseover", () => {
   loop(false);
 });
 
-citrusBlue_Treats_carousel.addEventListener("mouseout", () => {
+citrusBlue_treats_carousel.addEventListener("mouseout", () => {
   loop(true);
 });
 
-//citrusBlue_Treats_carousel functions
+//citrusBlue_treats_carousel functions
 
 function loadIndicators() {
   slides.forEach((slide, index) => {
     if (index === 0) {
       document.querySelector(
-        ".citrusBlue_Treats_carousel-indicators"
+        ".citrusBlue_treats_carousel-indicators"
       ).innerHTML += `<span data-slide-to="${index}" class="active"></span>`;
     } else {
       document.querySelector(
-        ".citrusBlue_Treats_carousel-indicators"
+        ".citrusBlue_treats_carousel-indicators"
       ).innerHTML += `<span data-slide-to="${index}"></span>`;
     }
   });
@@ -208,34 +208,34 @@ function updateIndicators() {
     activeSlide = totalSlides - 1;
   }
   document
-    .querySelector(".citrusBlue_Treats_carousel-indicators span.active")
+    .querySelector(".citrusBlue_treats_carousel-indicators span.active")
     .classList.remove("active");
   document
-    .querySelectorAll(".citrusBlue_Treats_carousel-indicators span")
+    .querySelectorAll(".citrusBlue_treats_carousel-indicators span")
     [activeSlide].classList.add("active");
 }
 
 function slideToNext() {
   if (direction === 1) {
     direction = -1;
-    citrusBlue_Treats_carouselInner.prepend(
-      citrusBlue_Treats_carouselInner.lastElementChild
+    citrusBlue_treats_carouselInner.prepend(
+      citrusBlue_treats_carouselInner.lastElementChild
     );
   }
 
-  citrusBlue_Treats_carousel.style.justifyContent = "flex-start";
-  citrusBlue_Treats_carouselInner.style.transform = `translateX(-${step}%)`;
+  citrusBlue_treats_carousel.style.justifyContent = "flex-start";
+  citrusBlue_treats_carouselInner.style.transform = `translateX(-${step}%)`;
 }
 
 function slideToPrev() {
   if (direction === -1) {
     direction = 1;
-    citrusBlue_Treats_carouselInner.append(
-      citrusBlue_Treats_carouselInner.firstElementChild
+    citrusBlue_treats_carouselInner.append(
+      citrusBlue_treats_carouselInner.firstElementChild
     );
   }
-  citrusBlue_Treats_carousel.style.justifyContent = "flex-end";
-  citrusBlue_Treats_carouselInner.style.transform = `translateX(${step}%)`;
+  citrusBlue_treats_carousel.style.justifyContent = "flex-end";
+  citrusBlue_treats_carouselInner.style.transform = `translateX(${step}%)`;
   loop(false);
 }
 
@@ -250,7 +250,7 @@ function loop(status) {
 }
 // pov loader add. before full load js pov none.
 document.addEventListener("DOMContentLoaded", function () {
-  citrusBlue_Treats_carousel.style.display = "flex";
+  citrusBlue_treats_carousel.style.display = "flex";
 });
 
 /*-----------------------
