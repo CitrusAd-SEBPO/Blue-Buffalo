@@ -19,10 +19,6 @@ body {
   text-decoration: none;
 }
 
-/* .citrusBlue_treats__wrapper a:hover {
-  text-decoration: none;
-} */
-
 .citrusBlue_treats__wrapper h1,
 h2,
 h3,
@@ -174,42 +170,6 @@ h4 {
   object-fit: contain;
 }
 
-.citrusBlue_Treats__logo_common {
-  position: absolute;
-  top: 0;
-  right: 3% !important;
-  height: 100px;
-  width: 100px !important;
-}
-.citrusBlue_Treats__logo_second {
-  position: absolute;
-  top: 0;
-  right: 16% !important;
-  height: 100px;
-  width: 100px !important;
-}
-.citrusBlue_Treats__bdg_first {
-  position: absolute;
-  top: 40%;
-  left: 15.5% !important;
-  height: 40% !important;
-  width: 40% !important;
-}
-.citrusBlue_Treats__bdg_second {
-  position: absolute;
-  top: 40%;
-  left: 15.5% !important;
-  height: 40% !important;
-  width: 40% !important;
-}
-.citrusBlue_Treats__bdg_third {
-  position: absolute;
-  top: 45%;
-  left: 21% !important;
-  height: 42% !important;
-  width: 40% !important;
-}
-
 .citrusBlue_treats_banner-copy {
   position: absolute;
   top: 0;
@@ -234,20 +194,15 @@ h4 {
   color: #ffffff;
 }
 
-.citrusBlue_treats_banner-copy p .citrusBlue_Treats_br_minimal {
-  display: none;
-}
 
 /* Tasty Treats food Food Item */
 .citrusBlue_treats__tastyFood {
   text-align: center;
   margin-top: 45px;
 }
-
 .citrusBlue_treats__tastyFood .citrusBlue_treats__sectionTitle {
   padding-bottom: 10px;
 }
-
 .citrusBlue_treats__container {
   width: 976px;
   max-width: 100%;
@@ -256,14 +211,12 @@ h4 {
   overflow: auto;
   text-align: center;
 }
-
 .citrusBlue_treats__tastyFood_cart {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .citrusBlue_treats_food_details {
   display: flex;
   flex-direction: column;
@@ -273,26 +226,22 @@ h4 {
   color: #000000;
   margin-top: 20px;
 }
-
 .citrusBlue_treats_food_details p {
   width: 317px;
   margin: auto;
   line-height: 19.2px;
   margin-top: 20px;
 }
-
 .citrusBlue_treats_food_category {
   width: 976px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /* column-gap: 20px; */
   text-align: center;
 }
 .citrusBlue_treats_line_br {
   display: none;
 }
-
 .citrusBlue_treats_food_container_img img {
   width: 200px;
 }
@@ -306,26 +255,21 @@ h4 {
   padding-top: 30px;
   overflow: auto;
 }
-
 .citrusBlue_treats_explore_category {
   width: 1300px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /* column-gap: 20px; */
   text-align: center;
   margin: auto;
 }
-
 .citrusBlue_treats_explore_cart_img img {
   width: 194px;
   height: 108px;
 }
-
 .citrusBlue_treats_explore_cart_details {
   padding-top: 10px;
 }
-
 .citrusBlue_treats_explore_cart_details h3 {
   color: #000000;
   text-decoration: none;
@@ -364,8 +308,6 @@ h4 {
 }
 .items_wrapper {
   padding-bottom: 40px;
-  /* padding-right: 10px;
-  height: 250px; */
 }
 .items_wrapper > a {
   color: #333333;
@@ -373,7 +315,6 @@ h4 {
 }
 .items_wrapper__img {
   width: 100%;
-  /* max-width: 190px; */
   margin: auto;
   display: flex;
   justify-content: center;
@@ -446,7 +387,7 @@ h4 {
   align-items: center;
 }
 
-/* END lifestyle section product container styling */
+/* Start lifestyle section styling */
 
 .citrusBlue_treats__lifestyle_section {
   background: #f4f7ff;
@@ -519,7 +460,6 @@ h4 {
   .citrusBlue_treats_food_category {
     width: 300px;
   }
-
   .items_wrapper__img img {
     height: 100%;
   }
@@ -532,18 +472,10 @@ h4 {
 }
 
 @media all and (max-width: 375px) {
-  /* POV Slider */
-  #citrusBlue_Treats__meal {
-    top: 35px !important;
-  }
-  .citrusBlue_treats_carousel-item #citrusBlue_Treats__Nutrition {
-    top: 64px !important;
-  }
   /* Tasty Treats Food Item */
   .citrusBlue_treats__container {
     padding: 20px 0;
   }
-
   .citrusBlue_treats__tastyFood .citrusBlue_treats__sectionTitle {
     line-height: 27px;
   }
@@ -557,15 +489,11 @@ h4 {
   .citrusBlue_treats__tastyFood_cart {
     width: 247px;
   }
-  #citrusBlue_Treats__lifeLong {
-    padding-top: 20px;
-  }
   .citrusBlue_treats_food_category {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    /* column-gap: 20px; */
     text-align: center;
   }
   .citrus_food_catg_br {
@@ -642,7 +570,6 @@ h4 {
   .citrusBlue_treats__mobile-version {
     display: none;
   }
-
   .citrusBlue_treats_banner-copy {
     left: 2%;
   }
@@ -654,7 +581,6 @@ h4 {
     font-size: 15px;
     padding: 5px 0 10px 0;
     max-width: 438px;
-    word-wrap: break-word;
   }
   /* Tasty Treats Food */
   .citrusBlue_treats_food_container_img img {
@@ -687,8 +613,6 @@ h4 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    grid-gap: 0;
-    justify-content: left;
     overflow-x: hidden;
   }
   .irresitibleRow {
@@ -714,27 +638,19 @@ h4 {
 
   .single-col__container--items {
     /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px; */
     display: flex;
   }
   .items_wrapper {
-    width: 205px;
+    width: 100%;
     padding-right: 10px;
     padding-left: 10px;
     margin-bottom: 0;
   }
-  .citrusBlue_Treats__tab_item {
-    max-width: 100%;
-  }
+
   .citrusBlue_treats_splide-delectable {
     margin-top: 30px;
-  }
-  .citrusBlue_Treats__tab-area {
-    padding-top: 0px;
-  }
-
-  .citrusBlue_Treats__Product {
-    max-width: 235px;
   }
   .splide__arrows {
     display: none;
@@ -742,14 +658,6 @@ h4 {
   .items_wrapper .product-cta-underline .citrusBlue_treats_uiqueBtn {
     margin: 20px 10px;
   }
-  /* .items_wrapper .product-cta-underline .citrusBlue_treats_uiqueBtn {
-    margin: 20px 10px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 900;
-    font-family: "PetcoCircularTT-Bold", arial !important;
-    text-align: end;
-} */
 }
 
 @media all and (max-width: 768px) {
@@ -785,17 +693,10 @@ h4 {
 
 @media screen and (max-width: 768px) {
   /* POV Slider */
-
   .citrusBlue_treats_carousel,
   .citrusBlue_treats_carousel-inner,
   .citrusBlue_treats_carousel-item {
     height: auto;
-  }
-  .citrusBlue_treats__mobile-version.citrusBlue_Treats__tablet-version {
-    display: block !important;
-  }
-  .tablet_n {
-    display: none;
   }
 }
 
@@ -805,17 +706,6 @@ h4 {
   .citrusBlue_treats_carousel-inner,
   .citrusBlue_treats_carousel-item {
     height: auto;
-  }
-
-  .citrusBlue_Treats__logo_common {
-    height: 57px;
-    right: 1% !important;
-  }
-
-  .citrusBlue_Treats__logo_second {
-    right: 10% !important;
-    height: 42%;
-    width: 19% !important;
   }
   .citrusBlue_treats_banner-copy h1 {
     font-size: 20px;
@@ -827,30 +717,9 @@ h4 {
     padding: 7px 0 10px 0;
     max-width: 300px;
   }
-  .citrusBlue_treats_banner-copy .citrusBlue_Treats_homemadeMeals_pg {
-    width: 210px !important;
-  }
-  .citrusBlue_treats_banner-copy .citrusBlue_Treats__btn_alternative {
-    font-weight: bold;
-    width: 140px;
-    height: 42px;
-  }
-
-  .citrusBlue_Treats_seeDetails {
-    padding-top: 7px;
-  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Common Button */
-  .citrusBlue_treats__tastyFood .citrusBlue_Treats__btn_alternative,
-  .citrusBlue_Treats__tab-area_btn .citrusBlue_Treats__btn_alternative,
-  .citruHonest__embedVideo .citrusBlue_Treats__btn_alternative,
-  .citrusBlue_Treats__humanGrade_section .citrusBlue_Treats__btn_alternative {
-    width: 150px;
-    height: 40px;
-  }
-
   /* Tasty Treats food Food */
   .citrusBlue_treats_food_container_img img {
     width: 170px;
@@ -877,24 +746,10 @@ h4 {
     max-width: 360px;
   }
 
-  .citrusBlue_treats_banner-copy p .citrusBlue_Treats_br_minimal {
-    display: block;
-  }
-
-  .citrusBlue_Treats__btn_alternative {
-    width: 160px;
-    height: 40px;
-  }
-
-  .citrusBlue_Treats_seeDetails {
-    padding-top: 7px;
-  }
-
   /* Tasty Treats food Food Item */
   .citrusBlue_treats_food_category {
     column-gap: 0;
   }
-
   .citrusBlue_treats_food_details p {
     width: 300px;
   }
@@ -905,7 +760,6 @@ h4 {
   .citrusBlue_treats_carousel,
   .citrusBlue_treats_carousel-inner,
   .citrusBlue_treats_carousel-item {
-    /* height: 218px; */
     height: auto;
   }
 

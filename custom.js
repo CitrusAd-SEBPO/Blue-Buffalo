@@ -30,7 +30,7 @@ function featureProductScroller(idx) {
             perPage: 1,
           },
           992: {
-            perPage: 1,
+            perPage: 2,
           },
           1024: {
             perPage: 2,
@@ -86,7 +86,7 @@ let direction = -1;
 
 let jump = 1;
 
-let interval = 5000000000; /*5000*/
+let interval = 5000; /*5000*/
 
 let time;
 
