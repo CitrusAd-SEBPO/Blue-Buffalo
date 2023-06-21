@@ -27,7 +27,7 @@ function featureProductScroller(idx) {
             perPage: 1,
           },
           991: {
-            perPage: 1,
+            perPage: 2,
           },
           992: {
             perPage: 2,
