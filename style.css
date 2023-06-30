@@ -4,10 +4,10 @@ body {
   padding: 0;
 }
 
-.citrusBlue_treats__container::-webkit-scrollbar,
+/* .citrusBlue_treats__container::-webkit-scrollbar,
 .citrusBlue_Treats__productCarousal-wrapper::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .citrusBlue_treats__wrapper {
   width: 100%;
@@ -74,21 +74,25 @@ h4 {
 }
 
 /* overflow scroll bar hide */
-/* Hide scrollbar for Chrome, Safari and Opera */
-.citrusBlue_treats__container::-webkit-scrollbar,
-.citrusBlue_treats_explore_container::-webkit-scrollbar {
-  display: none;
-}
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .citrusBlue_treats__container::-webkit-scrollbar,
+  .citrusBlue_treats__tastyFood::-webkit-scrollbar,
+  .citrusBlue_treats__tastyFood .citrusBlue_treats__wholesomeSection::-webkit-scrollbar,
+  .citrusBlue_treats_explore_container::-webkit-scrollbar {
+    display: none;
+  }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.citrusBlue_treats__wrapper,
-.citrusBlue_treats__container,
-.citrusBlue_treats_explore_container {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .citrusBlue_treats__wrapper,
+  .citrusBlue_treats__container,
+  .citrusBlue_treats__tastyFood::-webkit-scrollbar,
+  .citrusBlue_treats__tastyFood .citrusBlue_treats__wholesomeSection::-webkit-scrollbar,
+  .citrusBlue_treats_explore_container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
 
 .citrusBlue_treats__sectionTitle {
   text-align: center;
@@ -204,10 +208,16 @@ h4 {
 .citrusBlue_treats__tastyFood .citrusBlue_treats__sectionTitle {
   padding-bottom: 10px;
 }
-.citrusBlue_treats__container {
-  width: 976px;
-  max-width: 100%;
+.citrusBlue_treats__wholesomeSection {
   margin: auto;
+  max-width: 100%;
+  width: 976px;
+  display: block;
+}
+.citrusBlue_treats__container {
+  /* width: 976px;
+  max-width: 100%;
+  margin: auto; */
   padding: 30px 0;
   overflow: auto;
   text-align: center;
@@ -233,6 +243,7 @@ h4 {
   line-height: 19.2px;
   margin-top: 20px;
   color: #000;
+  font-weight: 500;
 }
 .citrusBlue_treats_food_category {
   width: 976px;
